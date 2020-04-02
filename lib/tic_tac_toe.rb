@@ -54,7 +54,6 @@ class TicTacToe
     if valid_move?(index)
       player = current_player
       move(index, player)
-      draw?
       display_board
     else
       turn
@@ -113,6 +112,7 @@ class TicTacToe
   def play
     until over?
       turn
+      draw?
     end
     
     if won?
